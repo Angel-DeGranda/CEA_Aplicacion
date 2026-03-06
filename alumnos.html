@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alumnos - Sistema Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="Clientes.html">Clientes</a>
+        <a href="alumnos.html">Alumnos</a>
+        <a href="">Maestros</a>
+        <a href="">Clases</a>
+        <a href="">Reportes</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>Registro de Alumno</h2>
+            <form id="form-alumno">
+                <label>Padre/Tutor responsable:</label>
+                <div class="autocomplete-wrapper">
+                    <input type="text" id="buscar-tutor" placeholder="Escribe el nombre del cliente..." autocomplete="off">
+                    <input type="hidden" id="al-tutor-id">
+                    <ul id="lista-tutores"></ul>
+                </div>
+                <input type="text" id="al-nombre" placeholder="Nombre completo" required>
+                <label>Fecha de nacimiento:</label>
+                <input type="date" id="al-fecha" required>
+                <button type="submit">Agregar Alumno</button>
+            </form>
+        </div>
+        <!-- <div class="card">
+            <h2>Inscribir Alumno a Curso</h2>
+            <form id="form-inscripcion">
+                <select id="sel-ins-alumno" required><option value="">Selecciona Alumno</option></select>
+                <select id="sel-ins-curso" required><option value="">Selecciona Curso</option></select>
+                <button type="submit" style="background:#2980b9">Inscribir Ahora</button>
+            </form>
+        </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>

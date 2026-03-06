@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Maestros - Sistema Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html">🏠 Inicio</a>
+        <a href="alumnos.html">👨‍🎓 Alumnos</a>
+        <a href="maestros.html">👨‍🏫 Maestros</a>
+        <a href="clases.html">📚 Clases</a>
+        <a href="reportes.html">🔍 Reportes</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>👨‍🏫 Registro de Maestros</h2>
+            <form id="form-maestro">
+                <input type="text" id="ma-nombre" placeholder="Nombre del Maestro" required>
+                <input type="email" id="ma-email" placeholder="Correo del Docente" required>
+                <input type="text" id="ma-especialidad" placeholder="Especialidad (Ej: Natación)">
+                <button type="submit">Registrar Maestro</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>

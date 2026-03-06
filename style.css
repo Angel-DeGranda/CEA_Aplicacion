@@ -1,217 +1,84 @@
-/* ═══════════════════════════════
-   AquaGest — style.css
-   Tema oscuro suave con acentos pasteles
-   Fácil para los ojos en la noche
-═══════════════════════════════ */
-
-:root {
-  /* Fondo oscuro-suave, no negro puro */
-  --bg:           #1e2330;
-  --bg-card:      #262d3d;
-  --bg-navbar:    #1a2030;
-
-  /* Textos */
-  --text:         #c8d4e8;
-  --text-muted:   #7a8aaa;
-
-  /* Acentos pasteles */
-  --mint:         #89c4b0;
-  --sky:          #85b8d4;
-  --rose:         #d4a0a8;
-  --lavender:     #a89cd4;
-
-  /* Borde suave */
-  --border:       rgba(255, 255, 255, 0.07);
-
-  --radius:       10px;
-  --font:         'Inter', sans-serif;
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background-color: #f4f7f6; 
+    margin: 0; 
+    padding: 0; 
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.main-nav { 
+    background: #2c3e50; 
+    padding: 15px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
 }
 
-body {
-  font-family: var(--font);
-  background-color: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.main-nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 8px 15px; 
+    border-radius: 5px; 
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.main-nav a:hover { 
+    background: #34495e; 
 }
 
-/* ══════════════
-   NAVBAR
-══════════════ */
-.navbar {
-  background-color: var(--bg-navbar);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.container { 
+    max-width: 800px; 
+    margin: 30px auto; 
+    padding: 0 20px; 
 }
 
-.nav-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
+.card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    margin-bottom: 20px; 
 }
 
-.logo {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--mint);
-  letter-spacing: 0.02em;
-  flex-shrink: 0;
+h2 { color: #2c3e50; 
+    margin-top: 0; 
 }
 
-.nav-links {
-  display: flex;
-  gap: 0.2rem;
-  flex-wrap: wrap;
+input, select { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
 }
 
-.nav-link {
-  padding: 0.4rem 0.85rem;
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--text-muted);
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+button { width: 100%; 
+    padding: 12px; 
+    background: #27ae60; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: bold; 
 }
 
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text);
+button:hover { 
+    background: #219150; 
 }
 
-.nav-link.active {
-  color: var(--mint);
-  background: rgba(137, 196, 176, 0.1);
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
 }
 
-/* ══════════════
-   MAIN
-══════════════ */
-.main {
-  flex: 1;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  width: 100%;
+th, td { 
+    text-align: left; 
+    padding: 12px; 
+    border-bottom: 1px solid #ddd; 
 }
 
-/* Bienvenida */
-.welcome {
-  margin-bottom: 3rem;
-}
-
-.welcome-sub {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--mint);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.5rem;
-}
-
-.welcome-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.02em;
-  margin-bottom: 0.6rem;
-}
-
-.welcome-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  font-weight: 300;
-  line-height: 1.6;
-  max-width: 460px;
-}
-
-/* Tarjetas de estadísticas */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.stat-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.4rem 1.6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.stat-label {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-.stat-num {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-/* Colores distintos por tarjeta */
-.stat-card:nth-child(1) .stat-num { color: var(--mint); }
-.stat-card:nth-child(2) .stat-num { color: var(--sky); }
-.stat-card:nth-child(3) .stat-num { color: var(--lavender); }
-.stat-card:nth-child(4) .stat-num { color: var(--rose); }
-
-/* ══════════════
-   FOOTER
-══════════════ */
-.footer {
-  border-top: 1px solid var(--border);
-  padding: 1.2rem 2rem;
-  text-align: center;
-}
-
-.footer p {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-/* ══════════════
-   RESPONSIVO
-══════════════ */
-@media (max-width: 900px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .nav-links {
-    display: none;
-  }
-
-  .welcome-title {
-    font-size: 1.5rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+th { 
+    background: #f8f9fa; 
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clases - Sistema Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html">🏠 Inicio</a>
+        <a href="alumnos.html">👨‍🎓 Alumnos</a>
+        <a href="maestros.html">👨‍🏫 Maestros</a>
+        <a href="clases.html">📚 Clases</a>
+        <a href="reportes.html">🔍 Reportes</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>📖 Crear Nueva Clase</h2>
+            <form id="form-curso">
+                <input type="text" id="cu-nombre" placeholder="Nombre de la Clase" required>
+                <input type="text" id="cu-horario" placeholder="Horario (Ej: Lun y Mie 16:00 - 18:00)" required>
+                <select id="select-maestro-asignado" required><option value="">Asignar Maestro Responsable</option></select>
+                <button type="submit">Crear Clase</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
