@@ -8,26 +8,30 @@
 </head>
 <body>
     <nav class="main-nav">
+        <button class="nav-toggle" id="nav-toggle">☰</button>
         <a href="index.html">Inicio</a>
         <a href="Clientes.html">Clientes</a>
         <a href="alumnos.html">Alumnos</a>
-        <a href="">Maestros</a>
+        <!-- <a href="">Maestros</a>
         <a href="">Clases</a>
-        <a href="">Reportes</a>
+        <a href="">Reportes</a> -->
     </nav>
     <div class="container">
         <div class="card">
             <h2>Registro de Clientes</h2>
             <form id="form-cliente">
+                <label for="al-nombre">Nombre del cliente:</label>
                 <input type="text" id="al-nombre" placeholder="Nombre completo" required>
-                <label>Fecha de nacimiento:</label>
+                <label for="al-fecha">Fecha de nacimiento:</label>
                 <input type="date" id="al-fecha" required>
+                <label for="al-email">Correo del cliente:</label>
                 <input type="email" id="al-email" placeholder="Email" required>
-                <input type="tel" id="al-telefono" placeholder="Teléfono" maxlength="10">
-                <button type="submit">Agregar Cliente</button>
+                <label for="al-telefono">Número de teléfono:</label>
+                <input type="tel" id="al-telefono" placeholder="Teléfono" maxlength="10" required>
+                <button type="submit" class="button-form">Agregar Cliente</button>
             </form>
         </div>
     </div>
-    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
 </body>
 </html>

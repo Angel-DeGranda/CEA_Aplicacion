@@ -52,7 +52,7 @@ input, select {
     box-sizing: border-box; 
 }
 
-button { width: 100%; 
+.button-form { width: 100%; 
     padding: 12px; 
     background: #27ae60; 
     color: white; 
@@ -63,7 +63,7 @@ button { width: 100%;
     font-weight: bold; 
 }
 
-button:hover { 
+.button-form:hover { 
     background: #219150; 
 }
 
@@ -79,6 +79,42 @@ th, td {
     border-bottom: 1px solid #ddd; 
 }
 
-th { 
-    background: #f8f9fa; 
+th {
+    background: #f8f9fa;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: transparent;
+        border: 2px solid #2c3e50;
+        color: white;
+        font-size: 20px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .nav-toggle:hover{
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    .main-nav a {
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-nav.abierto a {
+        display: block;
+    }
 }
