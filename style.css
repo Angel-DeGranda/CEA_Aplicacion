@@ -52,6 +52,12 @@ input, select {
     box-sizing: border-box; 
 }
 
+input[type="date"] {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
 .button-form { width: 100%; 
     padding: 12px; 
     background: #27ae60; 
