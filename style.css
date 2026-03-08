@@ -1,14 +1,14 @@
 html {
   --s: 118px; /* control the size*/
   --c1: #ffffff;
-  --c2: #3777d6;
+  --c2: #96bff3;
   
   --_g: 
      var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
      var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
   background:
-    radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g),#0008 96%,#0000),
-    radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
+    radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g),rgba(29, 28, 28, 0.533) 96%,#211f1f00),
+    radial-gradient(100% 100% at 0 100%,#1e1c1c00, #0008 4%,var(--_g),var(--c1) 96%)
     var(--c1);
   background-size: var(--s) var(--s);
 }
@@ -16,16 +16,17 @@ html {
 body { 
     font-family: 'Segoe UI', sans-serif; 
     background-color: transparent; 
-    margin: 0; 
-    padding: 0; 
+    margin: 0px; 
+    padding: 0px; 
 }
 
 .main-nav { 
-    background: #0055AF; 
+    background: #003d80; 
     padding: 15px; 
     display: flex; 
     justify-content: center; 
     gap: 20px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .main-nav a { 
@@ -37,7 +38,7 @@ body {
 }
 
 .main-nav a:hover { 
-    background: #34495e; 
+    background: #00336a; 
 }
 
 .container { 
@@ -52,9 +53,11 @@ body {
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     margin-bottom: 20px; 
+    margin: 30px auto;
 }
 
-h2 { color: #2c3e50; 
+h2 { 
+    color: #2c3e50; 
     margin-top: 0; 
 }
 
@@ -76,7 +79,7 @@ input[type="date"] {
 
 .button-form { width: 100%; 
     padding: 12px; 
-    background: #27ae60; 
+    background: #114ac7; 
     color: white; 
     border: none; 
     border-radius: 5px; 
@@ -86,7 +89,7 @@ input[type="date"] {
 }
 
 .button-form:hover { 
-    background: #219150; 
+    background: #073088; 
 }
 
 table { 
@@ -118,7 +121,7 @@ th {
     .nav-toggle {
         display: block;
         background: transparent;
-        border: 2px solid #0055AF;
+        border: 2px solid #003d80;
         color: white;
         font-size: 20px;
         padding: 5px 10px;
