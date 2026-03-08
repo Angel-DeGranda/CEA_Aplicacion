@@ -57,7 +57,6 @@ input[type="date"] {
     box-sizing: border-box;
     min-width: 0;
     -webkit-appearance: none;
-    appearance: none;
 }
 
 .button-form { width: 100%; 
